@@ -1,0 +1,650 @@
+/* Reset and base styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* navbar  */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 88px;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.navbar a:hover {
+    color: #ddd;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    .navbar a {
+        padding: 1rem;
+        text-align: center;
+        display: block;
+    }
+
+    .menu-toggle {
+        display: inline;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+}
+
+/* image  */
+#image-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+/* Make the image responsive */
+#image-1 img {
+    width: 100%;         /* Image will take up the full width of its container */
+    height: auto;        /* Maintains the image's aspect ratio */
+    max-width: 800px;    /* Optional: Limit the maximum width on larger screens */
+    border-radius: 8px;  /* Optional: Adds rounded corners */
+    object-fit: cover;   /* Optional: Ensures the image covers the container */
+}
+
+
+#home, #about, #services, #contact {
+    padding: 80px 20px;
+}
+
+
+/* General styling for text sections */
+.adv, .component {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styling */
+h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Paragraph styling */
+.adv p, .component p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Styled lists for advantages, disadvantages, and components */
+.adv p, .component p {
+    list-style-position: inside;
+    padding-left: 1.2em;
+}
+
+/* Numbered list styling */
+.adv p, .component p {
+    counter-reset: item;
+}
+
+.adv p > strong, .component p > strong {
+    font-weight: bold;
+    color: #444;
+}
+
+/* Media queries for responsive text */
+@media (max-width: 768px) {
+    .adv, .component {
+        padding: 15px;
+        margin: 10px;
+    }
+    
+    h3 {
+        font-size: 1.3em;
+    }
+    
+    .adv p, .component p {
+        font-size: 0.9em;
+    }
+}
+
+
+/* footer */
+/* Footer container styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    font-size: 0.9em;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Footer section styling */
+.footer-section {
+    flex: 1;
+    margin: 20px;
+}
+
+.footer-section h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.footer-section p {
+    line-height: 1.6;
+    color: #ddd;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+/* Social icons styling */
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons li {
+    display: inline;
+}
+
+.social-icons li a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons li a:hover {
+    color: #fff;
+}
+
+/* Footer bottom styling */
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    color: #aaa;
+    font-size: 0.8em;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-section {
+        margin: 10px 0;
+    }
+}
+
+
+/* codes */
+/* General container styling */
+.models, .architecture {
+    background-color: #f5f5f5;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings for each section */
+.models h3, .architecture h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Paragraph text styling */
+.models p, .architecture p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+}
+
+/* List styling inside the models section */
+.models p {
+    padding-left: 20px;
+}
+
+/* Bullet points styling for types */
+.models p ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.models p ul li {
+    color: #555;
+    font-size: 1em;
+}
+
+/* Blockquote styling for additional information */
+.models blockquote, .architecture blockquote {
+    font-style: italic;
+    color: #777;
+    padding: 10px 20px;
+    background: #eee;
+    border-left: 4px solid #ddd;
+    margin: 15px 0;
+}
+
+/* Architecture section specific styling */
+.architecture {
+    background-color: #e8f4ff;
+}
+
+.architecture h3 {
+    color: #004080;
+}
+
+.architecture p {
+    color: #333;
+}
+
+/* Image styling for any diagrams or models */
+.architecture img, .models img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .models, .architecture {
+        padding: 20px;
+    }
+
+    .models h3, .architecture h3 {
+        font-size: 1.5em;
+    }
+    
+    .models p, .architecture p {
+        font-size: 0.9em;
+    }
+}
+
+
+/* key */
+
+
+/* General container styling for the keys section */
+.keys {
+    background-color: #f9f9f9;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styling for the 'Keys in DBMS' */
+.keys h3 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Paragraph styling */
+.keys p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: #555;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* Styling for lists of types of keys */
+.keys ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+/* List item styling */
+.keys ul li {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Styling for the table examples */
+.keys table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.keys table, .keys th, .keys td {
+    border: 1px solid #ddd;
+}
+
+.keys th, .keys td {
+    padding: 12px;
+    text-align: left;
+}
+
+.keys th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.keys td {
+    background-color: #fff;
+}
+
+/* Blockquote styling for additional information */
+.keys blockquote {
+    font-style: italic;
+    color: #777;
+    padding: 10px 20px;
+    background: #eee;
+    border-left: 4px solid #ddd;
+    margin: 15px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .keys {
+        padding: 20px;
+    }
+
+    .keys h3 {
+        font-size: 1.6em;
+    }
+
+    .keys p {
+        font-size: 1em;
+    }
+
+    .keys ul li {
+        font-size: 1em;
+    }
+
+    .keys table {
+        font-size: 0.9em;
+    }
+}
+
+
+/* normal */
+/* Styling for the normaliazation section */
+.normaliazation {
+    background-color: #f4f4f4;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the section headings */
+.normaliazation h3 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Paragraph styling within the normalization section */
+.normaliazation p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Add more spacing and separation between paragraphs */
+.normaliazation p + p {
+    margin-top: 20px;
+}
+
+/* Styling for lists of normal forms */
+.normaliazation ul {
+    list-style: square;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+/* List item styling */
+.normaliazation ul li {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Blockquote styling for additional notes or examples */
+.normaliazation blockquote {
+    font-style: italic;
+    color: #777;
+    padding: 10px 20px;
+    background: #f9f9f9;
+    border-left: 4px solid #ddd;
+    margin: 20px 0;
+}
+
+/* Table styling for examples or lists */
+.normaliazation table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.normaliazation table, .normaliazation th, .normaliazation td {
+    border: 1px solid #ddd;
+}
+
+.normaliazation th, .normaliazation td {
+    padding: 12px;
+    text-align: left;
+}
+
+.normaliazation th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.normaliazation td {
+    background-color: #fff;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .normaliazation {
+        padding: 20px;
+    }
+
+    .normaliazation h3 {
+        font-size: 1.6em;
+    }
+
+    .normaliazation p {
+        font-size: 1em;
+    }
+
+    .normaliazation ul li {
+        font-size: 1em;
+    }
+
+    .normaliazation table {
+        font-size: 0.9em;
+    }
+}
+
+
+
+/* Overall container for the cards */
+.course-cards {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-items: center;
+}
+
+/* Course container styling */
+.course-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Title styling */
+.course-container h1 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Description styling */
+.course-container p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Price Section */
+.price-section {
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #00b300; /* Green color for the price */
+}
+
+.discount {
+    font-size: 1.1em;
+    color: #ff5e5e; /* Red color for discount message */
+}
+
+/* Buy Now button styling */
+.buy-now-btn {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    font-size: 1.1em;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.buy-now-btn:hover {
+    background-color: #45a049; /* Darker green when hovered */
+}
+
+.buy-now-btn:active {
+    background-color: #3e8e41; /* Even darker green when clicked */
+}
+
+
+/* 
+/* img */
+/* Container styling */
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 850px; 
+    width: 100%; 
+    overflow: hidden; 
+    border-radius: 10px; 
+    background-color: #f4f4f4; 
+}
+
+/* Image styling */
+.img img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;                             
+    border-radius: 10px; 
+} 
